@@ -5,7 +5,7 @@ exports.signup = async (req, res) => {
     try {
 
         await user.save()
-        res.json({data: user, status: 'success'})
+        res.json({data: {name: user.name, email: user.email}, status: 'success'})
     } catch (error) {
         res.status(500).json({error: error.message})
     }

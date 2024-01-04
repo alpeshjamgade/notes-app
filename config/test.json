@@ -1,6 +1,6 @@
 {
   "RATE_LIMIT": {
-    "windowMs": 900000, // 15 minutes in milliseconds :- 15 * 60 * 1000
+    "windowMs": 900000,
     "max": 100
   },
   "WEB_PORT": 3000,

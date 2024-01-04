@@ -86,7 +86,10 @@ exports.shareNote = async (req, res) => {
             return res.status(404).json({ error: 'User not found' });
         }
 
-        console.log(user)
+        if (!note) {
+            return res.status(404).json({ error: 'Note not found' });
+        }
+
         note.sharedWith.push(user._id);
         await note.save();
 
@@ -98,7 +101,6 @@ exports.shareNote = async (req, res) => {
 
 
 exports.searchNote = async (req, res) => {
-    console.log(req.query)
 
     try {
         const note = await NoteModel.find({title: { $regex: req.query.q, $options: 'i' }})

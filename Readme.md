@@ -9,11 +9,9 @@ The Notes App is a simple backend application that allows users to create, view,
 - [Technologies Used](#technologies-used)
 - [Getting Started](#getting-started)
     - [Prerequisites](#prerequisites)
-    - [Installation](#installation)
     - [Running the App](#running-the-app)
     - [Running Tests](#running-tests)
-- [Contributing](#contributing)
-- [License](#license)
+- [Rate Limiting](#rate-limiting)
 
 ## Features
 
@@ -33,13 +31,14 @@ The Notes App is built using the following technologies:
 - **Express.js**: A web application framework for Node.js.
 - **MongoDB**: A NoSQL database for storing notes.
 - **Mongoose**: An ODM (Object Data Modeling) library for MongoDB and Node.js.
-
+- **Jest**: Javascript framework used for unit testing. 
 ### Prerequisites
 
 Before running the Notes App, ensure you have the following installed on your machine:
 
 - [Node.js](https://nodejs.org/)
 - [MongoDB](https://www.mongodb.com/try/download/community)
+
 
 ### Running the App
 1. Clone the repository:
@@ -58,6 +57,14 @@ Before running the Notes App, ensure you have the following installed on your ma
 4. Start Server
    ```bash
    npm run start
+
+### Running tests
+   Run all the tests
+  ```bash
+  npm test
+  ```
+      
+  
 
 ## Rate Limiting
 

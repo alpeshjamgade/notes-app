@@ -1,7 +1,9 @@
 const mongoose = require('mongoose')
+const config = require('config');
+
 
 mongoose.connect(
-    process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/notes-db',
+    config.get('DB_URL'),
     {
         useNewUrlParser: true,
         useUnifiedTopology: true,
