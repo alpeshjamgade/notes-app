@@ -58,3 +58,21 @@ Before running the Notes App, ensure you have the following installed on your ma
 4. Start Server
    ```bash
    npm run start
+
+## Rate Limiting
+
+The application has rate limiting to prevent abuse and ensure the stability of the server. Used the `express-rate-limit` middleware to achieve this.
+
+### Rate Limit Configuration
+
+The rate limit is configured with the following parameters:
+
+- **Window Time**: 15 minutes
+- **Maximum Requests per IP**: 100
+
+This means that each IP address is allowed to make up to 100 requests within a 15-minute window. If this limit is exceeded, the server will respond with an HTTP 429 Too Many Requests status.
+
+The rate limit is configured in the `config` directory. To adjust the rate-limiting settings, modify the `config/default.json` file. The current configuration is as follows:
+
+- **Window Time**: 15 minutes
+- **Maximum Requests per IP**: 100
